@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>quiero amarte siempre, n :)</title>
+  <style>
+    @font-face {
+      font-family: 'KaroooFont';
+      src: url('FuenteDeKarooo-Regular.otf') format('opentype');
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'KaroooFont', sans-serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #ffd1dc);
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #e60073;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 80px 20px;
+    }
+
+    #cancion h2 {
+      font-size: 3rem;
+      color: navy;
+    }
+
+    #recuerdo {
+      display: none;
+      background-color: #fff;
+      padding: 60px 20px;
+    }
+
+    #recuerdo.mostrar {
+      display: block;
+    }
+
+    #recuerdo h2 {
+      color: navy;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .poema {
+      white-space: pre-wrap;
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+    }
+
+    .imagenes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .imagenes img {
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>quiero <a href="#cancion" onclick="reproducirMusica()">amarte</a> siempre, n :)</h1>
+  </header>
+
+  <section id="cancion">
+    <h2 style="font-size: 3rem; color: navy;">
+      <a onclick="mostrarRecuerdo()">tú</a>, que me orbitas como el sol ;)
+    </h2>
+    <p>
+      me gusta pensar que Dios va a ser tan bueno conmigo que va a escuchar mis suplicas y nos va a dejar juntas siempre, y que cuando pase el último día de mi vida, las personas que me conocieron, se van a quedar con la versión de mi que elegí ser desde que estoy contigo. <br />
+      ahora que creo conocer el amor de cerca, me volví fiel creyente de que las cosas mas bonitas que uno se encuentra en la vida, son las más reales, y que por eso en todas esas cosas bonitas que conozco siempre puedo encontrar algo tuyo. te amo por siempre y te elijo a ti siempre, porque hacerlo es vivir condenada a apreciar las cosas hermosas.
+    </p>
+
+    <audio id="musica" loop>
+      <source src="Love Like You.mp3" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </section>
+
+  <section id="recuerdo">
+    <h2>Lo que me recuerda a ti</h2>
+    <div class="poema">
+Te escribo ahora,
+tarde como siempre,
+porque
+ya
+sabes
+que
+no
+sé
+escribir
+en según qué tiempos verbales.
+
+Te escribo ahora porque te he perdido,
+tal y como estaba calculado
+-el minuto antes de encontrarte.
+
+Perdona, por tanto, si ahora sí me permito enamorarme de ti.
+
+Ya
+sabes
+que
+nunca
+me
+han
+gustado
+las
+personas,
+hasta que las hago personajes.
+
+Ahi, entonces,
+-aqui,
+sí sé amar
+y besar
+y follar
+y tratarte como te mereces:
+-bien y mal.
+
+Sobre el papel no hay caricia que se me resista
+ni se fingen los orgasmos
+ni los susurros de después.
+Aqui puedo describirte con tan sumo cuidado
+como si de volver a crearte se tratara.
+
+Puedo hacer que digas
+exactamente, lo que quiero escuchar,
+puedo hacer que quieras quedarte,
+y soltarte cuando yo decida echarme atrás.
+
+Te escribo,
+ahora que no te tengo
+porque
+es
+la
+única
+manera
+que
+sé
+de
+tenerte.
+
+Aqui, sobre el papel,
+eres tal y como imaginé,
+no tienes defectos,
+-y las virtudes las invento,
+Aqui te creo yo
+basándome en tu molde
+pero partiendo desde cero.
+
+esculpiendo tu silueta
+como se esculpen las figuras más perfectas:
+con la lengua y los dedos
+y las manos y los ojos
+y tu pelo y el mio
+y tu piel y mis gemidos.
+
+Te he conseguido hacer tan real
+que casi te creo con los ojos abiertos
+-que casi te quiero,
+y es perfecto.
+
+Tú no hace falta que vuelvas,
+ni para irte
+ni para quedarte,
+y no es que no te eche de menos
+
+es
+que
+desde
+que
+te
+has
+ido,
+
+por fin te tengo.
+    </div>
+
+    <div class="imagenes">
+      <img src="uno.jpeg" alt="Imagen 1">
+      <img src="due.jpeg" alt="Imagen 2">
+      <img src="tre.jpeg" alt="Imagen 3">
+      <img src="cuatro.jpeg" alt="Imagen 4">
+    </div>
+ <p>
+      te adoro por siempre. <br />
+    
+    </p>
+  </section>
+
+  <script>
+    function reproducirMusica() {
+      const audio = document.getElementById("musica");
+      audio.play();
+    }
+
+    function mostrarRecuerdo() {
+      const seccion = document.getElementById("recuerdo");
+      seccion.classList.add("mostrar");
+      seccion.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
